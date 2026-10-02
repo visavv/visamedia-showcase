@@ -1,0 +1,9 @@
+# Only reviewed showcase files belong in this repository.
+/*
+!/.gitignore
+!/README.md
+!/CASE_STUDY.md
+!/assets/
+/assets/*
+!/assets/channel-profiles.png
+!/assets/vod-browser.png
