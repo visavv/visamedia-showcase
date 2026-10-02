@@ -47,21 +47,9 @@ flowchart LR
 | Editable effects | Reviewed face zoom suggestions, local motion tracking, Fusion keyframes and separate Effects timeline versions |
 | Format-specific layouts | Independent Videos and Shorts native layout snapshots and channel preferences |
 
-## Interface
-
-A compact, centered workspace with a shimmering wordmark, keyboard navigation and platform colors: purple for Twitch, green for Kick and red for YouTube. Navigation, terminal resizing and progress display have been refined through repeated use.
-
 ![VISAMEDIA Twitch VOD browser](assets/vod-browser.png)
 
 *Development screenshots from the working application. Labels and navigation continue to evolve. Channel names and stream titles are examples of browsing public metadata; they do not imply affiliation.*
-
-## Engineering focus
-
-- **Preserve editability:** place source In/Out ranges on the timeline rather than baking selected clips into replacement files.
-- **Keep experiments reproducible:** save transcript snapshots, source references, per-run outputs and model decisions.
-- **Make failures explicit:** stop on invalid model output or failed review, retain partial records, and flag uncertain candidates.
-- **Keep the editor in control:** distinguish a proposed title or reaction from an approved editing decision.
-- **Separate responsibilities:** UI, media processing, provider adapters, analysis and Resolve integration have distinct roles.
 
 Technology: **Python, prompt_toolkit, Rich, yt-dlp, FFmpeg/FFprobe, faster-whisper, Ollama, OpenCV, Pillow, and the DaVinci Resolve scripting/Fusion APIs.**
 
@@ -69,14 +57,4 @@ See the [development case study](CASE_STUDY.md) for design decisions, validation
 
 ## Current status
 
-This is a working personal tool under active development, with automated checks and local integration trials. Resolve selection placement and the first editable zoom pass have been exercised; zoom rendering was validated with synthetic moving footage. The Claude subscription adapter has automated coverage but still needs a live session trial. Real-stream face selection and tracking quality need further evaluation.
-
-**Separate Videos/Shorts layout snapshots are implemented. Automatically applying arbitrary three-layer templates to new selections is still pending mapping and validation.** Shorts selection does not itself produce a finished vertical edit. Transcript-based analysis cannot reliably infer vocal tone, silent visual highlights or sarcasm, and suggested clips require editorial review.
-
-## About this repository
-
-This repository presents the product and its development for portfolio/CV use. It contains documentation and selected interface screenshots. The application, private source code, credentials, media library, transcripts and run logs are not distributed here. There is no downloadable application release in this repository.
-
-The project is developed iteratively with AI-assisted coding and hands-on workflow design. VISAMEDIA is independent of the platforms, AI providers and editing products mentioned above.
-
-**Owner:** [visavv](https://github.com/visavv)
+This is a working personal tool under active development
